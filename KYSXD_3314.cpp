@@ -1,5 +1,6 @@
 //"""
 //#KYSXD - Problema 3314
+//Fast Traveler Game
 //"""
 
 #include <iostream>

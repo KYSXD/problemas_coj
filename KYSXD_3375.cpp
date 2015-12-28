@@ -1,5 +1,6 @@
 //"""
 //#KYSXD - Problema 3375
+//Naebbirac Phrases
 //"""
 
 #include <iostream>
@@ -15,8 +16,7 @@ int main()
 
     string A, B;
     cin >> casos;
-    int contador[casos];
-
+ 
     for(int i = 0; i < casos; i++){
         cambios = 0;
         cin >> A >> B;
