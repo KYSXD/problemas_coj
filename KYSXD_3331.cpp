@@ -2,17 +2,19 @@
 //#KYSXD - Problema 3331
 //Bob and Solitary Kings
 //"""
+//Status:
+//"""
 
 #include <iostream>
 #include <stdio.h>
 
 using namespace std;
 
-int main(){
+int main() {
 	long long int row, col, total;
 
-	while(scanf("%lld %lld", &row, &col)) {
-		if(row == 0 && col == 0) break;
+	while (scanf("%lld %lld", &row, &col)) {
+		if (row == 0 && col == 0) break;
 
 		total = row*col;
 		total = total*(total-1);

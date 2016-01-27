@@ -2,6 +2,8 @@
 //#KYSXD - Problema 3327
 //How Many Numbers
 //"""
+//Status:
+//"""
 
 #include <iostream>
 #include <string>
@@ -11,7 +13,7 @@
 
 using namespace std;
 
-long long int elevar_a_p(int a, int p){
+long long int elevar_a_p(int a, int p) {
     if (p == 0) return 1;
     return a*elevar_a_p(a, p-1);
 }
@@ -35,13 +37,11 @@ long long int casos(int p, int i) {
 int main(){
 	int pares, impares;
 	long long int total;
-	while(cin >> pares >> impares) {
+	while (cin >> pares >> impares) {
 		if (pares == 0 && impares == 0) break;
-		else {
+		else
 			total = 2*casos(pares, impares);
-		}
 		cout << total << endl;
 	}
-
 	return 0;
 }

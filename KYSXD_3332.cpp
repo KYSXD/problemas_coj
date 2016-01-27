@@ -2,6 +2,8 @@
 //#KYSXD - Problema 3332
 //GCD and LCM
 //"""
+//Status:
+//"""
 
 #include <iostream>
 #include <stdio.h>
@@ -10,10 +12,10 @@
 
 using namespace std;
 
-long long int elevar_a_p(int a, int p){
+long long int elevar_a_p(int a, int p) {
 	int temp = p;
     long long int res = 1;
-    while(temp != 0) {
+    while (temp != 0) {
     	--temp;
 	    res *= a;
     }
@@ -23,30 +25,28 @@ long long int elevar_a_p(int a, int p){
 int primes(long long int n) {
 	int how_many = 0, max = sqrt(n) + 1;
 
-	if(n%2 == 0) {
+	if (n%2 == 0) {
 		++how_many;
 
-		while(n%2 == 0){
+		while (n%2 == 0)
 			n /= 2;
-		}
 	}
 
 	for(long long int i = 3; i <= max && i <= n ; i += 2) {
-		if(n%i == 0) {
+		if (n%i == 0) {
 			++how_many;
-			while(n%i == 0){
+			while (n%i == 0)
 				n /= i;
-			}
 		}
 
 	}
 
-	if(n != 1) ++how_many;
+	if (n != 1) ++how_many;
 
 	return how_many;
 }
 
-int main(){
+int main() {
 	int cases, temp;
 	long long int N, M, res;
 
@@ -56,11 +56,10 @@ int main(){
 		scanf("%lld %lld", &N, &M);
 		res = 0;
 
-		if(M%N == 0){
-			if(M == N) {
+		if (M%N == 0) {
+			if (M == N)
 				res = 1;
-			}
-			else{
+			else {
 				temp = primes(M/N);
 				res = elevar_a_p(2, temp - 1);
 			}

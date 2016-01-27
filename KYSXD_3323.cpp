@@ -2,6 +2,8 @@
 //#KYSXD - Problema 3323
 //Even Number of Divisors
 //"""
+//Status:
+//"""
 
 #include <iostream>
 #include <math.h>
@@ -24,13 +26,11 @@ long long int cuentaCuadrados(long long int primero, long long int ultimo) {
 int main()
 {
     long long int inicio, fin, resultado;
-    while(scanf("%lld %lld", &inicio, &fin)) {
-        if (inicio == 0 && fin == 0) {
+    while (scanf("%lld %lld", &inicio, &fin)) {
+        if (inicio == 0 && fin == 0)
             break;
-        }
-        else {
+        else
             resultado = ((fin - inicio) + 1) - cuentaCuadrados(inicio, fin);
-        }
         printf("%lld\n",resultado);
     }
     return 0;

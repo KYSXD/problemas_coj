@@ -2,6 +2,8 @@
 //#KYSXD - Problema 3375
 //Naebbirac Phrases
 //"""
+//Status:
+//"""
 
 #include <iostream>
 #include <string>
@@ -9,24 +11,22 @@
 
 using namespace std;
 
-int main()
-{
-    int n = 100;
-    int casos, cambios;
+int main() {
+    int cases, diff;
 
     string A, B;
-    cin >> casos;
+    cin >> cases;
  
-    for(int i = 0; i < casos; i++){
-        cambios = 0;
+    for(int i = 0; i < cases; i++) {
+        diff = 0;
         cin >> A >> B;
 
-        for(int j = 0; j < min(A.length(), B.length()); j++){
+        for(int j = 0; j < min(A.length(), B.length()); j++) {
             if(A[j] != B[j]) {
-                cambios++;
+                diff++;
             }
         }
-        cout << cambios << endl;
+        cout << diff << endl;
     }
     return 0;
 }
